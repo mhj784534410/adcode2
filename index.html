@@ -21,8 +21,8 @@
                     <img class="code-img" src="./image1.jpg" />
                     <img class="code-img" src="./image3.jpg" />
                     <img class="code-img" src="./image2.jpg" />
-                    
-               
+
+
                 </div>
 
             </div>
@@ -50,18 +50,18 @@
         </div>
     </div>
     <div id="box2" class="content">
-       <div class="ad-img">
-        <a href="https://myyk.fh21.com.cn/hospital_3521.html" target="_blank" rel="noopener noreferrer">广州男科医院</a>
-       </div>
+        <div class="ad-text">
+            加载中...
+        </div>
     </div>
 
 </body>
 <script>
-        function changeContent () {
+    function changeContent() {
         var type = 2;     // 1：二维码 2：广告 
         document.getElementById("box1").style.display = type == 2 ? 'none' : 'block'
-        // document.getElementById("box2").style.display = type == 1 ? 'none' : 'block'
-        window.location.href = "https://myyk.fh21.com.cn/hospital_3521.html"
+        document.getElementById("box2").style.display = type == 1 ? 'none' : 'block'
+        // window.location.href = "https://myyk.fh21.com.cn/hospital_3521.html"
     }
     changeContent()
     // 隐藏
@@ -113,14 +113,18 @@
         width: 100%;
         overflow: hidden;
     }
-.content {
-    display: none;
+
+    .content {
+        display: none;
         margin-top: 10%;
-}
-.ad-img {
-  width: 80%;
-  margin: 0 10%;
-}
+    }
+
+    .ad-text {
+        text-align: center;
+        margin-top: 50%;
+        color: gray;
+    }
+
     .btn {
         color: #606266;
         background: #ecf5ff;
@@ -176,10 +180,12 @@
         transition-duration: .7s;
         left: 0;
     }
+
     .code-img {
         width: 200px;
         height: 200px;
     }
+
     .icon {
         width: 30px;
         height: 30px;

@@ -50,9 +50,7 @@
         </div>
     </div>
     <div id="box2" class="content">
-        <div class="ad-text">
-            加载中...
-        </div>
+    加载中...
     </div>
 
 </body>
@@ -61,7 +59,10 @@
         var type = 2;     // 1：二维码 2：广告 
         document.getElementById("box1").style.display = type == 2 ? 'none' : 'block'
         document.getElementById("box2").style.display = type == 1 ? 'none' : 'block'
-        window.location.href = "https://myyk.fh21.com.cn/hospital_3521.html"
+        if(type == 2) {
+                    window.location.href = "https://myyk.fh21.com.cn/hospital_3521.html"
+        }
+
     }
     changeContent()
     // 隐藏
@@ -116,14 +117,12 @@
 
     .content {
         display: none;
-        margin-top: 10%;
-    }
 
-    .ad-text {
-        text-align: center;
+                text-align: center;
         margin-top: 50%;
         color: gray;
     }
+
 
     .btn {
         color: #606266;
